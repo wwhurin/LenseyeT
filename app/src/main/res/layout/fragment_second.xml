@@ -1,14 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="kr.hs.emirim.wwhurin.lenseye5.SecondFragment"
-    android:background="@drawable/back">
+
+    android:background="@drawable/back_w">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/allmenu"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/Colorlens"
+                android:layout_width="120sp"
+                android:layout_height="100sp"
+                android:button="@null"
+                android:text="컬러 렌즈"
+                android:textColor="@drawable/radio_custom"
+                android:textAlignment="center"
+                />
+
+            <RadioButton
+                android:id="@+id/clearlens"
+                android:layout_width="120sp"
+                android:layout_height="100sp"
+                android:button="@null"
+                android:text="투명 렌즈"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_custom" />
+
+            <RadioButton
+                android:id="@+id/ondaylens"
+                android:layout_width="120sp"
+                android:layout_height="100sp"
+                android:layout_gravity="right"
+                android:button="@null"
+                android:text="원데이 렌즈"
+                android:textAlignment="center" />
+
+        </TableRow>
+    </TableRow>
 </RelativeLayout>

@@ -1,0 +1,249 @@
+{
+  "project_info": {
+    "project_number": "218041642175",
+    "firebase_url": "https://lenseeye3-cdc.firebaseio.com",
+    "project_id": "lenseeye3-cdc",
+    "storage_bucket": "lenseeye3-cdc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218041642175:android:7a513d8133712cc0",
+        "android_client_info": {
+          "package_name": "com.stac.oarum.kr.hs.lenseeye3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "218041642175-9rglqhnn8nmtt110laqkglkhtojii78q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpaQaQZg0pWQH8fzZldMhxcOUUS2sFGLc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218041642175:android:2d576f8eba0a6e7a",
+        "android_client_info": {
+          "package_name": "kr.hs.emirim.arum.database"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "218041642175-trq16k12nkmra9ougtjp12s7tue0jtc1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.hs.emirim.arum.database",
+            "certificate_hash": "8a236fd9d1e8290434899c83652b20d285ccc76b"
+          }
+        },
+        {
+          "client_id": "218041642175-9rglqhnn8nmtt110laqkglkhtojii78q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpaQaQZg0pWQH8fzZldMhxcOUUS2sFGLc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "218041642175-9rglqhnn8nmtt110laqkglkhtojii78q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218041642175:android:7355110677a5415c",
+        "android_client_info": {
+          "package_name": "kr.hs.emirim.arum.database02"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "218041642175-opthjj3vjg6hv0oic5aoq4iupqonvhm1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.hs.emirim.arum.database02",
+            "certificate_hash": "8a236fd9d1e8290434899c83652b20d285ccc76b"
+          }
+        },
+        {
+          "client_id": "218041642175-9rglqhnn8nmtt110laqkglkhtojii78q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpaQaQZg0pWQH8fzZldMhxcOUUS2sFGLc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "218041642175-9rglqhnn8nmtt110laqkglkhtojii78q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218041642175:android:b6525a0cd07dc9f2",
+        "android_client_info": {
+          "package_name": "kr.hs.emirim.hyeonjinmirim.lenseeyegoogle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "218041642175-rkbhc53kfei4pnrmtsacajfp947utpsu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.hs.emirim.hyeonjinmirim.lenseeyegoogle",
+            "certificate_hash": "cf6bc6e4d01dc22f2e88ce07492193dcfafc4ca1"
+          }
+        },
+        {
+          "client_id": "218041642175-9rglqhnn8nmtt110laqkglkhtojii78q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpaQaQZg0pWQH8fzZldMhxcOUUS2sFGLc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "218041642175-9rglqhnn8nmtt110laqkglkhtojii78q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218041642175:android:69037c40396682f6",
+        "android_client_info": {
+          "package_name": "kr.hs.emirim.arum.databasetest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "218041642175-9rglqhnn8nmtt110laqkglkhtojii78q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpaQaQZg0pWQH8fzZldMhxcOUUS2sFGLc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218041642175:android:46c2897998364043",
+        "android_client_info": {
+          "package_name": "kr.hs.emirim.wwhurin.lenseye5"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "218041642175-jn5b73ia0sese6689qhaitoo5t26qs1j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.hs.emirim.wwhurin.lenseye5",
+            "certificate_hash": "fbdb6bf244cf686b70e154ebd0763f544bbd4ce9"
+          }
+        },
+        {
+          "client_id": "218041642175-9rglqhnn8nmtt110laqkglkhtojii78q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpaQaQZg0pWQH8fzZldMhxcOUUS2sFGLc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "218041642175-9rglqhnn8nmtt110laqkglkhtojii78q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

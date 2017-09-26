@@ -4,7 +4,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/drawerLayout">
+    android:id="@+id/drawerLayout"
+    >
 
     <LinearLayout
         android:id="@+id/drawer"
@@ -13,14 +14,13 @@
         android:layout_height="match_parent"
         android:weightSum="100"
         android:layout_gravity="end"
-        android:background="#e49e9e"
+        android:background="@drawable/rsz_home_back"
         android:gravity="center">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <Button
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="여기는 슬라이딩 메뉴입니다~"
-            android:textColor="#000"/>
+            android:text="사용자 이름"/>
 
     </LinearLayout>
 
@@ -80,6 +80,16 @@
             android:background="@drawable/tab_bg_selector"
             android:gravity="center"
             android:text="EVENT"
+            android:textColor="@drawable/tab_color_selector" />
+
+        <TextView
+            android:id="@+id/tab_fifth"
+            android:layout_width="0dip"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/tab_bg_selector"
+            android:gravity="center"
+            android:text="CONTENT"
             android:textColor="@drawable/tab_color_selector" />
 
     </LinearLayout>

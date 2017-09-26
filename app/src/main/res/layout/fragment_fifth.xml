@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="kr.hs.emirim.wwhurin.lenseye5.ForthFragment"
+    tools:context="kr.hs.emirim.wwhurin.lenseye5.FifthFragment"
     android:background="@drawable/back_w">
 
     <!-- TODO: Update blank fragment layout -->

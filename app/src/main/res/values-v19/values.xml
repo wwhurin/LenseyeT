@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">218041642175-9rglqhnn8nmtt110laqkglkhtojii78q.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://lenseeye3-cdc.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">218041642175</string>
+    <string name="google_api_key" translatable="false">AIzaSyBpaQaQZg0pWQH8fzZldMhxcOUUS2sFGLc</string>
+    <string name="google_app_id" translatable="false">1:218041642175:android:69037c40396682f6</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBpaQaQZg0pWQH8fzZldMhxcOUUS2sFGLc</string>
+    <string name="google_storage_bucket" translatable="false">lenseeye3-cdc.appspot.com</string>
+    <string name="project_id" translatable="false">lenseeye3-cdc</string>
+</resources>

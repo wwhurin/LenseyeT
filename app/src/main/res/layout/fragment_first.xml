@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="kr.hs.emirim.wwhurin.lenseye5.FirstFragment"
-    android:background="@drawable/back"
+    android:background="@drawable/back_w"
    >
 
     <!-- TODO: Update blank fragment layout -->
@@ -13,23 +14,136 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/rsz_event_logo"
-        android:layout_marginBottom="99dp"
-        android:layout_alignBottom="@+id/imageView3"
+        android:layout_height="100dp"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/rsz" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="300dp"
         android:layout_height="100dp"
-        app:srcCompat="@drawable/eye"
-        android:layout_marginTop="123dp"
-        android:layout_marginRight="120dp"
-        android:layout_marginEnd="120dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:src="@drawable/eye"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/time_lens"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:src="@drawable/lenstime"
+        android:layout_above="@+id/change_case_timing"
+        android:layout_alignLeft="@+id/chang_lens_timing"
+        android:layout_alignStart="@+id/chang_lens_timing"
+        android:layout_marginBottom="36dp" />
+
+    <ImageView
+        android:id="@+id/chang_lens_timing"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/time_lens"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="53dp"
+        android:src="@drawable/changelens" />
+
+    <ImageView
+        android:id="@+id/change_case_timing"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_alignLeft="@+id/chang_lens_timing"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/chang_lens_timing"
+        android:layout_marginBottom="18dp"
+        android:src="@drawable/changecase_btn" />
+
+    <TextView
+        android:id="@+id/name_lavel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이 름  :   "
+        android:textSize="17sp"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/imageView3"
+        android:layout_alignStart="@+id/imageView3"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름 입력받아오기"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/name_lavel"
+        android:layout_alignBottom="@+id/name_lavel"
+        android:layout_alignRight="@+id/lens_time_when"
+        android:layout_alignEnd="@+id/lens_time_when" />
+
+    <TextView
+        android:id="@+id/age_lavel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/name_lavel"
+        android:layout_alignRight="@+id/name_lavel"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="12dp"
+        android:text="나  이 :  "
+        android:textSize="17sp"
+        android:layout_alignLeft="@+id/name_lavel"
+        android:layout_alignStart="@+id/name_lavel" />
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/name"
+        android:layout_alignRight="@+id/name"
+        android:layout_alignTop="@+id/age_lavel"
+        android:text="나이 입력받아오기"
+        android:textStyle="bold"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:id="@+id/lens_time_when"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:text="렌즈를 착용하지 않았어요"
+        android:layout_marginTop="24dp"
+        android:layout_alignTop="@+id/time_lens"
+        android:layout_toRightOf="@+id/time_lens"
+        android:layout_toEndOf="@+id/time_lens"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp" />
+
+    <TextView
+        android:id="@+id/chang_lens_when"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="11dp"
+        android:layout_above="@+id/change_case_timing"
+        android:layout_alignLeft="@+id/lens_time_when"
+        android:layout_alignStart="@+id/lens_time_when" />
+
+    <TextView
+        android:id="@+id/change_case_when"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/chang_lens_timing"
+        android:layout_alignLeft="@+id/chang_lens_when"
+        android:layout_alignStart="@+id/chang_lens_when"
+        android:layout_marginTop="11dp" />
+
 
 </RelativeLayout>

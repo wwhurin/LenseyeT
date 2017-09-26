@@ -1,6 +1,5 @@
 package kr.hs.emirim.wwhurin.lenseye5;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -13,8 +12,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.tsengvn.typekit.TypekitContextWrapper;
 
 import static kr.hs.emirim.wwhurin.lenseye5.R.layout.activity_main;
 
@@ -30,10 +27,11 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
        // setTheme(android.R.style.Theme_Holo_Light_NoActionBar_TranslucentDecor);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(activity_main);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setCustomActionbar();
 
@@ -49,6 +47,7 @@ public class MainActivity extends AppCompatActivity
         TextView tab_second = (TextView)findViewById(R.id.tab_second);
         TextView tab_third = (TextView)findViewById(R.id.tab_third);
         TextView tab_forth = (TextView)findViewById(R.id.tab_forth);
+        TextView tab_fifth = (TextView)findViewById(R.id.tab_fifth);
 
         vp.setAdapter(new pagerAdapter(getSupportFragmentManager()));
         vp.setCurrentItem(0);
@@ -61,6 +60,8 @@ public class MainActivity extends AppCompatActivity
         tab_third.setTag(2);
         tab_forth.setOnClickListener(movePageListener);
         tab_forth.setTag(3);
+        tab_fifth.setOnClickListener(movePageListener);
+        tab_fifth.setTag(4);
 
         tab_first.setSelected(true);
 
@@ -76,7 +77,7 @@ public class MainActivity extends AppCompatActivity
             public void onPageSelected(int position)
             {
                 int i = 0;
-                while(i<4)
+                while(i<5)
                 {
                     if(position==i)
                     {
@@ -116,10 +117,10 @@ public class MainActivity extends AppCompatActivity
 
         actionbar.setBackgroundDrawable(getResources().getDrawable(R.drawable.topback));
     }
-
-    @Override protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
-    }
+//
+//    @Override protected void attachBaseContext(Context newBase) {
+//        super.attachBaseContext(TypekitContextWrapper.wrap(newBase));
+//    }
 
 
     View.OnClickListener movePageListener = new View.OnClickListener()
@@ -130,7 +131,7 @@ public class MainActivity extends AppCompatActivity
             int tag = (int) v.getTag();
 
             int i = 0;
-            while(i<4)
+            while(i<5)
             {
                 if(tag==i)
                 {
@@ -166,6 +167,8 @@ public class MainActivity extends AppCompatActivity
                     return new ThirdFragment();
                 case 3:
                     return new ForthFragment();
+                case 4:
+                    return new FifthFragment();
                 default:
                     return null;
             }
@@ -173,7 +176,7 @@ public class MainActivity extends AppCompatActivity
         @Override
         public int getCount()
         {
-            return 4;
+            return 5;
         }
     }
 
