@@ -14,13 +14,15 @@
         android:layout_height="match_parent"
         android:weightSum="100"
         android:layout_gravity="end"
-        android:background="@drawable/rsz_home_back"
-        android:gravity="center">
+        android:background="@drawable/settingback"
+        android:gravity="center"
+        >
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="사용자 이름"/>
+            android:text="설정"
+            android:textColor="#516f9e"/>
 
     </LinearLayout>
 
@@ -63,17 +65,7 @@
             android:textColor="@drawable/tab_color_selector" />
 
         <TextView
-        android:id="@+id/tab_third"
-        android:layout_width="0dip"
-        android:layout_height="50dp"
-        android:layout_weight="1"
-        android:background="@drawable/tab_bg_selector"
-        android:gravity="center"
-        android:text="RANK"
-        android:textColor="@drawable/tab_color_selector" />
-
-        <TextView
-            android:id="@+id/tab_forth"
+            android:id="@+id/tab_third"
             android:layout_width="0dip"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -83,7 +75,7 @@
             android:textColor="@drawable/tab_color_selector" />
 
         <TextView
-            android:id="@+id/tab_fifth"
+            android:id="@+id/tab_forth"
             android:layout_width="0dip"
             android:layout_height="50dp"
             android:layout_weight="1"

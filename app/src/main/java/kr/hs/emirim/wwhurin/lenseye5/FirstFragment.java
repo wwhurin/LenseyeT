@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -26,6 +27,7 @@ import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import static android.app.Activity.RESULT_OK;
 import static java.lang.Integer.parseInt;
 
 
@@ -69,6 +71,17 @@ public class  FirstFragment extends Fragment
         return layout;
 
     }
+
+    @Override
+    public void onSaveInstanceState(Bundle outStae){
+        super.onSaveInstanceState(outStae);
+
+    }
+
+   /* @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState){
+       super.getContext().onRestoreInstanceState(savedInstanceState);
+    }*/
 //    public void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
 //        View view = inflater.inflate(R.layout.activity_tab1, null);
@@ -79,6 +92,12 @@ public class  FirstFragment extends Fragment
 //        imageView=(ImageView) View.findViewById(R.id.imageView3);
 //        imageView.setOnClickListener(m);
 //    }
+ /*   public void eyebtn(){
+        Toast.makeText(getActivity().getApplication(), "버튼눌림", Toast.LENGTH_SHORT);
+        mOnPopupClick();
+            *//*if(check)
+                new AlarmHATT(getActivity().getApplicationContext()).Alarm();*//*
+    }*/
 
 
     public static class MyAlertDialogFragment extends DialogFragment {
@@ -123,11 +142,19 @@ public class  FirstFragment extends Fragment
         }
 
         public void Alarm(){
-
+            Toast.makeText(context, "알람 시작", Toast.LENGTH_SHORT);
+            Log.i("MyLog", "알람한다 눌림");
             now = System.currentTimeMillis();
             date = new Date(now);
             sdfnow = new SimpleDateFormat("MM-dd-HH-mm");
             formatDate = sdfnow.format(date);
+
+            String[] startTime = formatDate.split("-");
+
+            for (int i = 0; i < 4; i++) {
+                sdate[i] = parseInt(startTime[i]);
+            }
+
 
             AlarmManager am=(AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
             Intent intent = new Intent(getActivity().getApplicationContext(), BroadcastD.class);
@@ -139,23 +166,55 @@ public class  FirstFragment extends Fragment
            // calendar.set(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DATE), sdate[2]+1, sdate[3], calendar.get(Calendar.SECOND));
            // calendar.set(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DATE), calendar.get(Calendar.HOUR, 1), sdate[3], calendar.get(Calendar.SECOND));
           //  calendar.set(calendar.HOUR, +1);
-            calendar.set(calendar.MINUTE, 2+ sdate[3]);
+            calendar.set(calendar.MINUTE, 8+sdate[2]); testStart();
             //알람 예약
-            am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), sender);
+            //am.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), sender); boolean stopchk = in
+            // tent.getExtras().getBoolean("stopchk");
+           // if(stopchk){
+
+           // }
 
         }
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1) {
+            if (resultCode == RESULT_OK) {
+                //데이터 받기
+                String result = data.getStringExtra("result");
+                //Toast.makeText(getContext(), "되라", Toast.LENGTH_SHORT);
+                check=data.getExtras().getBoolean("check");  //Log.i("MyLog", String.valueOf(check));
+                new AlarmHATT(getActivity().getApplicationContext()).Alarm();
+            }
+        }
+    }
+
+    public void mOnPopupClick(){
+        //데이터 담아서 팝업(액티비티) 호출
+        Intent intent = new Intent(getActivity().getApplicationContext(), lensPopActivity.class);
+        intent.putExtra("data", "Test Popup");
+        startActivityForResult(intent, 1);
+        //startActivity(intent);
+    }
+
+
+
     ImageView.OnClickListener m = new View.OnClickListener(){
         @Override
         public void onClick(View view) {
+            Log.i("MyLog", "눈 버튼이 눌림");
+           // Toast.makeText(getActivity().getApplication(), "버튼눌림", Toast.LENGTH_SHORT);
 
-            MyAlertDialogFragment newDialogFragment =
+/*  MyAlertDialogFragment newDialogFragment =
                     MyAlertDialogFragment.newInstance("LENSEYE");
-            newDialogFragment.show(getFragmentManager(), "dialog");
+            newDialogFragment.show(getFragmentManager(), "dialog");*/
 
-
-            new AlarmHATT(getActivity().getApplicationContext()).Alarm();
+            mOnPopupClick();
+            //intent.getExtras().getInt("itpangpang");
+          /*  if(check) {
+                new AlarmHATT(getActivity().getApplicationContext()).Alarm();
+            }*/
 
 
 
@@ -163,13 +222,8 @@ public class  FirstFragment extends Fragment
 
             //textView.append("ehla");
 
-            String[] startTime = formatDate.split("-");
 
-            for (int i = 0; i < 4; i++) {
-                sdate[i] = parseInt(startTime[i]);
-            }
-
-            testStart();
+            //testStart();
             ///lens_time_when.setText(sdate[3]+"분");
 
         }
@@ -180,32 +234,43 @@ public class  FirstFragment extends Fragment
         second = new TimerTask() {
             int timer_sec = 0;
             int count = 0;
+            boolean mIsRun = true;
 
             @Override
             public void run() {
                 Log.i("Test", "Timer start");
-                Update();
-                timer_sec++;
+
+                // timer_sec 체크
+
+                if(mIsRun) {
+                    Update();
+                    timer_sec++;
+                }else{
+                    // 정리코드
+
+                    lens_time_when.setText("렌즈를 착용하고 있지 않습니다.");
+                }
             }
         };
        Timer timer = new Timer();timer.schedule(second, 0, 1000);
     }
-
-    protected void Update() {
-        Runnable updater = new Runnable() {
+    Runnable updater;
+    public void Update() {
+       updater = new Runnable() {
             public void run() {
                 now = System.currentTimeMillis();
                 date = new Date(now);
                 SimpleDateFormat sdfnow = new SimpleDateFormat("mm");
                 String strNow = sdfnow.format(date);
                 int snow = Integer.parseInt(strNow);
-                Integer t=(snow-sdate[3]);
+                Integer t=(snow-sdate[3])+1;
                 String ttext=t.toString();
 
                 lens_time_when.setText(ttext+ "분");
             }
         };
         handler.post(updater);
+
     }
 
 

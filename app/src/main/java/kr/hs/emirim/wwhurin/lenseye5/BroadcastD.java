@@ -41,5 +41,8 @@ public class BroadcastD extends BroadcastReceiver {
         //AlerDialog 세팅
         alerDialogBuilder.setMessage("렌즈 권장 착용 시간이 지났어요! \n 서둘러 빼주세요! ");
 
+        intent.putExtra("stopchk", true);
+
+
     }
 }

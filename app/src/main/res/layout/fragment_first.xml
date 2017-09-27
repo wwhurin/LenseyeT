@@ -26,7 +26,8 @@
         android:layout_height="100dp"
         android:src="@drawable/eye"
         android:layout_below="@+id/imageView"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+       />
 
     <ImageView
         android:id="@+id/time_lens"
@@ -114,7 +115,7 @@
         android:layout_height="wrap_content"
         android:textSize="17sp"
         android:text="렌즈를 착용하지 않았어요"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="21dp"
         android:layout_alignTop="@+id/time_lens"
         android:layout_toRightOf="@+id/time_lens"
         android:layout_toEndOf="@+id/time_lens"

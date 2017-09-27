@@ -20,8 +20,7 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".BroadcastD"></receiver>
-
+        <receiver android:name=".BroadcastD" />
 
         <activity
             android:name=".actionbar"
@@ -32,7 +31,13 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".MainActivity" />
         <activity android:name=".InsertActivity" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".lensPopActivity"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity android:name=".ColorActivity" />
+        <activity android:name=".NoseeActivity" />
+        <activity android:name=".OnedayActivity"></activity>
     </application>
 
 </manifest>
