@@ -176,5 +176,18 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle outStae){
+        super.onSaveInstanceState(outStae);
+        //new FirstFragment().testStart();
+
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState){
+        super.onRestoreInstanceState(savedInstanceState);
+        //new FirstFragment().testStart();
+    }
+
 
 }

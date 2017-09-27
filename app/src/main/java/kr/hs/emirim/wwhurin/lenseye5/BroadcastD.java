@@ -14,7 +14,8 @@ import android.support.v7.app.AlertDialog;
 
 public class BroadcastD extends BroadcastReceiver {
     String INTENT_ACTION = Intent.ACTION_BOOT_COMPLETED;
-    BroadcastD(){
+
+    public BroadcastD(){
 
     }
 

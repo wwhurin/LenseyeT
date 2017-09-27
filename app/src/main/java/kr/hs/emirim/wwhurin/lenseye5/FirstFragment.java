@@ -6,6 +6,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.DialogFragment;
@@ -20,6 +21,10 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -47,13 +52,14 @@ public class  FirstFragment extends Fragment
     static ImageView imageView;
 
     TextView lens_time_when;
+    TextView tname;
 
     TextView dateNow;
 
-
+    String name;
     int sdate[]=new int[4];
 
-
+   // public var user;
 
     public FirstFragment()
     {
@@ -67,21 +73,34 @@ public class  FirstFragment extends Fragment
         imageView=(ImageView) layout.findViewById(R.id.imageView3);
         lens_time_when=(TextView)layout.findViewById(R.id.lens_time_when);
         imageView.setOnClickListener(m);
+        tname=(TextView)layout.findViewById(R.id.name);
 
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            for (UserInfo profile : user.getProviderData()) {
+                // Id of the provider (ex: google.com)
+                String providerId = profile.getProviderId();
+
+                // UID specific to the provider
+                String uid = profile.getUid();
+
+                // Name, email address, and profile photo Url
+               name= profile.getDisplayName();
+                String email = profile.getEmail();
+                Uri photoUrl = profile.getPhotoUrl();
+
+            };
+
+
+        }
+        tname.setText(name+"님");
         return layout;
 
     }
 
-    @Override
-    public void onSaveInstanceState(Bundle outStae){
-        super.onSaveInstanceState(outStae);
 
-    }
 
-   /* @Override
-    public void onRestoreInstanceState(Bundle savedInstanceState){
-       super.getContext().onRestoreInstanceState(savedInstanceState);
-    }*/
+
 //    public void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
 //        View view = inflater.inflate(R.layout.activity_tab1, null);

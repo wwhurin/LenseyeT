@@ -9,7 +9,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="LensEye"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".StartActivity">
@@ -37,7 +37,12 @@
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity android:name=".ColorActivity" />
         <activity android:name=".NoseeActivity" />
-        <activity android:name=".OnedayActivity"></activity>
+        <activity android:name=".OnedayActivity" />
+        <activity android:name=".TwoweekActivity" />
+        <activity android:name=".MonthActivity" />
+        <activity android:name=".AllActivity" />
+        <activity android:name=".actionActivity" />
+        <activity android:name=".ColorMemoryActivity"></activity>
     </application>
 
 </manifest>

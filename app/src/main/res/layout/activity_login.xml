@@ -6,7 +6,8 @@
     android:background="@drawable/bccolor"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="kr.hs.emirim.wwhurin.lenseye5.LoginActivity">
+    tools:context="kr.hs.emirim.wwhurin.lenseye5.LoginActivity"
+    android:weightSum="1">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,24 +29,18 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="273dp"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/login"
             android:layout_width="283dp"
             android:layout_height="60dp"
+            android:layout_gravity="center"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="90dp"
-            android:background="@drawable/google" />
-
-        <Button
-            android:id="@+id/insert"
-            android:layout_width="283dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/user1" />
+            android:background="@drawable/google"
+            android:gravity="center" />
 
     </LinearLayout>
 

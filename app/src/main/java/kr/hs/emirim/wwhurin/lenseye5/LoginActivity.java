@@ -29,9 +29,14 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     private GoogleApiClient mGoogleApiClient;
     private FirebaseAuth mAuth;
     Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.activity_login);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -61,14 +66,14 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             }
         });
 
-        final Button insert = (Button)findViewById(R.id.insert);
+       /* final Button insert = (Button)findViewById(R.id.insert);
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 intent = new Intent(LoginActivity.this, InsertActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
     }
 
